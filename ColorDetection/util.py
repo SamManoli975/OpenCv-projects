@@ -1,6 +1,7 @@
 import cv2 as cv
 import numpy as np
 
+#function to get the limits of the color we have to detect
 def get_limits(color):
     
     c = np.uint8([[color]])
