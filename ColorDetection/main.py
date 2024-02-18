@@ -4,7 +4,7 @@ from util import get_limits
 from PIL import Image
 # import numpy as np
 
-yellow = [0,255,255] #RGB yellow
+yellow = [0, 255, 0] #RGB green
 #create the window
 cap = cv.VideoCapture(0)
 cv.namedWindow('ColorDetection/frame', cv.WINDOW_NORMAL)
