@@ -19,7 +19,7 @@ def detect(gray, frame):
             cv.rectangle(roi_color, (sx, sy), ((sx + sw), (sy + sh)), (0, 0, 255), 2) 
     return frame 
 
-cap = cv.VideoCapture(1)
+cap = cv.VideoCapture(0)
 cv.namedWindow('ColorDetection/frame', cv.WINDOW_NORMAL)
 
 while True:

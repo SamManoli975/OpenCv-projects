@@ -6,7 +6,7 @@ from PIL import Image
 
 yellow = [0, 255, 0] #RGB green
 #create the window
-cap = cv.VideoCapture(0)
+cap = cv.VideoCapture(1)
 cv.namedWindow('ColorDetection/frame', cv.WINDOW_NORMAL)
 
 
