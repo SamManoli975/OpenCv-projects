@@ -1,8 +1,14 @@
 from ultralytics import YOLO
 import cv2
-from ultralytics.yolo.v8.detect.predict import DetectionPredictor
+from yolov5 import detect
 import torch
-model = YOLO("yolov8x.pt")
+model = YOLO("yolov5xu.pt")
+img = cv2.imread("ObjectDetection/market.jpg")
+img = cv2.resize(img, (640, 480))
+
+
 results = model.predict(source="0", show=True)
 
 print(results)
+
+cv2.waitKey(0)
