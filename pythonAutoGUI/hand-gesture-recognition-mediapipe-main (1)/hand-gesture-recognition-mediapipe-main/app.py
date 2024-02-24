@@ -4,6 +4,9 @@ import copy
 import argparse
 import itertools
 from collections import Counter
+import pyautogui
+import time
+import threading
 from collections import deque
 
 import cv2 as cv
@@ -489,6 +492,9 @@ def draw_bounding_rect(use_brect, image, brect):
 
     return image
 
+def perform_space_key_press():
+    pyautogui.press("space")
+    time.sleep(10)            
 
 def draw_info_text(image, brect, handedness, hand_sign_text,
                    finger_gesture_text):
@@ -496,8 +502,16 @@ def draw_info_text(image, brect, handedness, hand_sign_text,
                  (0, 0, 0), -1)
 
     info_text = handedness.classification[0].label[0:]
+
+    if hand_sign_text.lower() == "open":
+       perform_space_key_press()
+    # elif hand_sign_text.lower() == "thumbs up":
+    #     pyautogui.moveRel(100,0,duration=1)
+    # elif hand_sign_text.lower() == "peace":
+    #     pyautogui.moveRel(0,100,duration=1) 
     if hand_sign_text != "":
         info_text = info_text + ':' + hand_sign_text
+
     cv.putText(image, info_text, (brect[0] + 5, brect[1] - 4),
                cv.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1, cv.LINE_AA)
 

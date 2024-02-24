@@ -1,6 +1,7 @@
 import pyautogui
+import time
 # pyautogui.click()
-pyautogui.moveRel(200, 200, duration=6) 
+# pyautogui.moveRel(200, 200, duration=6) 
 # pyautogui.typewrite(['h', 'e', 'l', 'l', 'o'])
 # pyautogui.keyDown('alt')
 # pyautogui.press('tab')
@@ -9,6 +10,10 @@ pyautogui.moveRel(200, 200, duration=6)
 # pyautogui.keyUp('alt')
 # pyautogui.moveTao(50, 20)
 # pyautogui.click()
-print(pyautogui.position())
+time.sleep(3)
+for i in range(10):
+    pyautogui.press("space")
+    time.sleep(0.6)
+# print(pyautogui.position())
 
 
