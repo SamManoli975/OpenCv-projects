@@ -503,8 +503,8 @@ def draw_info_text(image, brect, handedness, hand_sign_text,
 
     info_text = handedness.classification[0].label[0:]
 
-    if hand_sign_text.lower() == "open":
-       perform_space_key_press()
+    # if hand_sign_text.lower() == "open":
+    #    perform_space_key_press()
     # elif hand_sign_text.lower() == "thumbs up":
     #     pyautogui.moveRel(100,0,duration=1)
     # elif hand_sign_text.lower() == "peace":
