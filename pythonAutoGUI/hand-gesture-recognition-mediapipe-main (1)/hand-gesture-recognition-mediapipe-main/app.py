@@ -492,9 +492,9 @@ def draw_bounding_rect(use_brect, image, brect):
 
     return image
 
-def perform_space_key_press():
-    pyautogui.press("space")
-    time.sleep(10)            
+# def perform_space_key_press():
+#     pyautogui.press("space")
+#     time.sleep(10)            
 
 def draw_info_text(image, brect, handedness, hand_sign_text,
                    finger_gesture_text):
