@@ -1,3 +1,3 @@
 # read me
 
-# MY OPEN CV PROJECS
+# MY OPEN CV PROJECTS
